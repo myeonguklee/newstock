@@ -7,11 +7,18 @@
 
 `개발기간: 24.08.26 ~ 24.10.11 (7주)`
 
-### [프로젝트 전체 리드미](https://github.com/ssafy-newstock/newstock)
+## [프로젝트 전체 리드미](https://github.com/ssafy-newstock/newstock)
 
 ![image (21).png](Picture/blueLogo.png)
 
-# 주요기능 🔍
+## 목차
+
+1. [주요 기능](#-주요-기능)
+2. [개발 사항](#-개발-사항)
+3. [기술 스택](#-기술-스택)
+4. [배운점](#-배운점)
+
+## 🔍 주요기능
 
 ### 📌 뉴스 제공 기능
 
@@ -34,18 +41,20 @@
 
 </div>
 
-# 💻 담당 역할
-  - 리액트 쿼리를 활용한 응답 데이터 캐싱으로 LLM API 비용 효율성 개선
-  - 주식 관련 페이지 구현 (전체 종목 조회 및 검색 기능, 분야별 주식 조회, 주식 종목 상세페이지)
-  - 주가 변화에 따른 주식 차트 시각화(실시간, 월봉 캔들 차트)
-  - 모의 주식 매도, 매수 기능 API 연결 및 구현
-  - 주식 차트 분석, 주식 차트 유사도 검색, 뉴스 요약하기 기능 API 연결 및 구현
-  - 종목 뉴스와 관련 주식 종목 매핑 및 주식 상세 페이지 이동 기능 연결
-  - 전체 페이지 스켈레톤 UI 구현 및 선언적 데이터 관리로 사용자 경험 향상
-  - styled componet를 활용한 라이트, 다크 모드 구현
-  - 로그인 기능 연결 및 zustand를 통한 로그인/로그아웃 유저 상태 관리
-  - ESLint, Prettier 설정 등 프론트 개발 환경 세팅
-  - Figma를 활용한 와이어프레임 및 디자인 구성
+## 💻 개발 사항
+- 비용 효율성 개선 및 성능 최적화
+    - Tanstack query 도입, 캐싱 전략 구현으로 LLM 활용한 **API 호출 최적화** 및 **토큰 비용 30% 감소** (주식 차트 분석, 주식 차트 유사도 검색, 뉴스 요약하기 기능)
+    - 스켈레톤 UI 및 선언적 데이터 관리로 로딩 상태 개선
+    - 주식 종목 검색 기능 디바운싱 적용으로 불필요한 **API 호출 방지 및 서버 부하 감소**
+- 주식 관련 기능 개발
+    - 실시간 선, 월봉 캔들 차트 시각화로 **직관적인 주가 데이터 전달**
+    - 웹소켓을 이용한 실시간 주가 정보 제공
+    - 낙관적 업데이트(찜), 시릿간 데이터 동기화(모의 주식)으로 **사용자 경험 향상**
+    - 모의 주식 서비스 및 투자 랭킹 구현으로 **게이미피케이션 학습 경험** 제공
+- AI, 빅데이터 기반 서비스 최적화
+    - AI 분석 기능의 긴 응답 시간을 고려한 프리페칭, 캐싱으로 **사용자 체감 대기 시간 단축**
+    - 챗봇 UI 구현으로 **자연스러운 AI 상호작용 경험** 제공
+    - 전역 상태 관리(Zustand) 및 서버 상태 관리(Tanstack Query)로 뉴스, 주식 빅데이터 효율적 관리
 
 <details>
  <summary>📢 페이지 상세설명</summary>
@@ -66,31 +75,31 @@
  </div>
 </details>
 
-## 기능 GIF
-### 3줄 요약
+### 기능 GIF
+#### 3줄 요약
 ![뉴스 3줄 요약](https://github.com/user-attachments/assets/606c9b8f-2c2d-4e93-94a5-d0cbc04fd307)
-### 실시간 주식
+#### 실시간 주식
 ![실시간 주식](https://github.com/user-attachments/assets/47b83be1-db0e-4f6a-a233-98dba04666b2)
-### 모의투자
+#### 모의투자
 ![모의투자 시연](https://github.com/user-attachments/assets/6ba45a95-e09b-43e1-9752-925b71df52cf)
-### 차트 분석
+#### 차트 분석
 ![차트 분석](https://github.com/user-attachments/assets/3bb6bb4b-f9fb-4464-82b1-500fcdde59e8)
-### 유사도 검색
+#### 유사도 검색
 ![유사도 검색](https://github.com/user-attachments/assets/c7163cad-a366-4dcd-bdd5-9a685093d8c8)
 
-## 기능 시연 영상
-### 주식 기능-1
+### 기능 시연 영상
+#### 주식 기능-1
 https://github.com/user-attachments/assets/85e95ce5-fd05-4e6d-b0d1-77e6d3392a21
 
-### 주식 기능-2
+#### 주식 기능-2
 https://github.com/user-attachments/assets/22e0ecf8-2faa-436d-af34-8a998cb39291
 
-### 다크모드
+#### 다크모드
 https://github.com/user-attachments/assets/8b02bdad-dfdf-4164-9f63-8914ff309622
 
 
 
-# 🛠 기술 스택
+## 🛠 기술 스택
 
 ### Frontend
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -105,7 +114,7 @@ https://github.com/user-attachments/assets/8b02bdad-dfdf-4164-9f63-8914ff309622
 - Typescript : 첫번째 프로젝트에서 Javascript를 사용하면서 겪었던 런타임 에러를 컴파일 시점에서 에러를 예방하고 수정하고자 Typescript를 도입함
 - styled-component : CSS-in-JS 방식으로 컴포넌트와 스타일을 함께 관리하여 재사용성과 유지보수성을 향상시키고 다크/라이트 모드를 구현하는 데 ThemeProvider를 활용하여 효율적이고 일관적인 UI를 구현할 수 있을 것이라 생각함
 
-# 📚 배운점
+## 📚 배운점
 - 사용자 경험에 대한 고려
   - 뉴스, 주식 데이터 캐싱으로 사용자 편의성 향상
   - 스켈레톤 UI와 선언적 데이터 관리를 통해 로딩, 에러 측면에서 사용자에게 일관된 경험 제공
